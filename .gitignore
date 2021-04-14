@@ -1,1 +1,6 @@
+# Files that do not belong into this repository
+*.exe
+
+# Editor files
 .idea
+.vscode
