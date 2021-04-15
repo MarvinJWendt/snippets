@@ -45,11 +45,11 @@ for (const changedFile of changedFiles) {
 }
 
 for (let file of files) {
-    console.log(run(`git restore --staged ${file.path}`))
+    run(`git restore --staged ${file.path}`)
 }
 
 for (let file of files) {
-    console.log(run(`git add ${file.path}`))
+    run(`git add ${file.path}`)
     console.log(run(`git commit -m "${file.commitType}(${file.language}): ${file.commitMessage} ${file.name}"`))
 }
 
