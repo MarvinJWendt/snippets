@@ -64,7 +64,7 @@ for (let file of files) {
     console.log(run(`git commit -m "${file.language}: ${file.commitMessage} \`${file.name}\` in \`${file.language === "snippets" ? "snippets" : file.scriptName}\`"`))
 }
 
-if (flags[0] === "push") run("git push")
+if (flags[0] === "push") console.log(run("git push"))
 
 function run(cmd) {
     console.log(`# Running command: "${cmd}"`)
