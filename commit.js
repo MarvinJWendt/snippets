@@ -25,7 +25,7 @@ for (const changedFile of changedFiles) {
             break
         case "M":
             type = "refactor"
-            message = "modified"
+            message = "updated"
             break
         case "D":
             type = "refactor"
