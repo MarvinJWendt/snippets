@@ -10,7 +10,6 @@ let files = []
 
 for (const changedFile of changedFiles) {
     const args = changedFile.split("/")
-    let type = ""
     let message = ""
     if (args.length === 1) {
         const name = args[0]
@@ -22,23 +21,18 @@ for (const changedFile of changedFiles) {
 
     switch (status) {
         case "A":
-            type = "feat"
             message = "added"
             break
         case "M":
-            type = "refactor"
             message = "updated"
             break
         case "D":
-            type = "refactor"
             message = "deleted"
             break
         case "R":
-            type = "refactor"
             message = "renamed"
             break
         case "C":
-            type = "refactor"
             message = "copied"
             break
         default:
@@ -50,7 +44,6 @@ for (const changedFile of changedFiles) {
         scriptName: args[0] === "snippets" ? args[args.length - 1] : args[args.length - 2],
         name: args[args.length - 1],
         language: args[0],
-        commitType: type,
         commitMessage: message
     })
 }
