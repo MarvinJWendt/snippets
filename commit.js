@@ -59,7 +59,7 @@ for (let file of files) {
 
 for (let file of files) {
     run(`git add ${file.path}`)
-    console.log(run(`git commit -m "${file.language}: ${file.commitMessage} \`${file.name}\` in \`${file.scriptName}\`"`))
+    console.log(run(`git commit -m "${file.language}: ${file.commitMessage} \`${file.name}\` in \`${file.language === "snippets" ? "snippets" : file.scriptName}\`"`))
 }
 
 function run(cmd) {
