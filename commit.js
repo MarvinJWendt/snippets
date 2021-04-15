@@ -1,5 +1,8 @@
 const exec = require('child_process').execSync
 
+const myArgs = process.argv.slice(2);
+console.log('myArgs: ', myArgs);
+
 run("git add .")
 
 let changedFiles = run("git status -s").split("\n").map(e => e.split(" ")[e.split(" ").length - 1])
