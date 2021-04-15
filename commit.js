@@ -30,7 +30,15 @@ for (const changedFile of changedFiles) {
         case "D":
             type = "refactor"
             message = "deleted"
-            break;
+            break
+        case "R":
+            type = "refactor"
+            message = "renamed"
+            break
+        case "C":
+            type = "refactor"
+            message = "copied"
+            m
         default:
             break;
     }
@@ -50,7 +58,8 @@ for (let file of files) {
 
 for (let file of files) {
     run(`git add ${file.path}`)
-    console.log(run(`git commit -m "${file.commitType}(${file.language}): ${file.commitMessage} ${file.name}"`))
+    console.log(run(`git commit -m "${file.language}: ${file.commitMessage} ${file.name}"`))
+    // console.log(run(`git commit -m "${file.commitType}(${file.language}): ${file.commitMessage} ${file.name}"`))
 }
 
 function run(cmd) {
