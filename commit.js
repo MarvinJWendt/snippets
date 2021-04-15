@@ -38,14 +38,15 @@ for (const changedFile of changedFiles) {
         case "C":
             type = "refactor"
             message = "copied"
-            m
+            break
         default:
-            break;
+            break
     }
 
     files.push({
         path: changedFile,
-        name: args[0] === "snippets" ? args[args.length - 1] : args[args.length - 2],
+        scriptName: args[0] === "snippets" ? args[args.length - 1] : args[args.length - 2],
+        name: args[args.length - 1],
         language: args[0],
         commitType: type,
         commitMessage: message
@@ -58,8 +59,7 @@ for (let file of files) {
 
 for (let file of files) {
     run(`git add ${file.path}`)
-    console.log(run(`git commit -m "${file.language}: ${file.commitMessage} ${file.name}"`))
-    // console.log(run(`git commit -m "${file.commitType}(${file.language}): ${file.commitMessage} ${file.name}"`))
+    console.log(run(`git commit -m "${file.language}: ${file.commitMessage} \`${file.name}\` in \`${file.scriptName}\`"`))
 }
 
 function run(cmd) {
