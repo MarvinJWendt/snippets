@@ -2,3 +2,4 @@
 vscode:
   extensions:
     - golang.go
+    - pkief.material-icon-theme
