@@ -54,5 +54,6 @@ for (let file of files) {
 }
 
 function run(cmd) {
+    console.log(`# Running command: "${cmd}"`)
     return exec(cmd, {encoding: 'utf-8'}).trim()
 }
