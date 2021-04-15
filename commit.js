@@ -1,7 +1,6 @@
 const exec = require('child_process').execSync
 
-const myArgs = process.argv.slice(2);
-console.log('myArgs: ', myArgs);
+const flags = process.argv.slice(2);
 
 run("git add .")
 
@@ -64,6 +63,8 @@ for (let file of files) {
     run(`git add ${file.path}`)
     console.log(run(`git commit -m "${file.language}: ${file.commitMessage} \`${file.name}\` in \`${file.language === "snippets" ? "snippets" : file.scriptName}\`"`))
 }
+
+if (flags[0] === "push") run("git push")
 
 function run(cmd) {
     console.log(`# Running command: "${cmd}"`)
