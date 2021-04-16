@@ -11,6 +11,9 @@ func main() {
 
 	fmt.Printf("Unfiltered: %v\n", unfiltered)
 	fmt.Printf("Filtered:   %v\n", filtered)
+	// Output:
+	// Unfiltered: [one two three four five six]
+    // Filtered:   [one two six]
 }
 
 // FilterStringSlice filters a string slice based on a predicate
