@@ -11,6 +11,9 @@ func main() {
 
 	fmt.Printf("Unfiltered: %v\n", unfiltered)
 	fmt.Printf("Filtered:   %v\n", filtered)
+	// Output
+	// Unfiltered: [1 2 3 4 5 6 7 8 9 10]
+	// Filtered:   [3 4 5 6 7 8]
 }
 
 // FilterIntSlice filters an integer slice based on a predicate
