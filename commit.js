@@ -3,6 +3,7 @@ const exec = require('child_process').execSync
 const flags = process.argv.slice(2);
 
 run("go run ./ci/main.go", false)
+run("git config --local core.safecrlf warn", false)
 run("git add -u .")
 
 let changedFiles = run("git status -s").split("\n").map(e => e.split(" ")[e.split(" ").length - 1])
