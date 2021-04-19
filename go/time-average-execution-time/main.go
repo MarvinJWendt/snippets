@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	one, _ := TimeExecutionAverage(10000, func(i int) error {
+	one, _ := TimeAverageExecutionTime(10000, func(i int) error {
 		_ = fmt.Sprintf("Hello, %s!", "World")
 
 		return nil
@@ -15,8 +15,8 @@ func main() {
 	fmt.Println(one)
 }
 
-// TimeExecutionAverage times the average execution time of a function.
-func TimeExecutionAverage(count int, f func(i int) error) (time.Duration, error) {
+// TimeAverageExecutionTime times the average execution time of a function.
+func TimeAverageExecutionTime(count int, f func(i int) error) (time.Duration, error) {
 	var total time.Duration
 	for i := 0; i < count; i++ {
 		start := time.Now()
