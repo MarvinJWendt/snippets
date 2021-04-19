@@ -12,8 +12,10 @@ import (
 )
 
 type ReadmeData struct {
-	TotalSnippetCount int
-	GoSnippetCount    int
+	TotalSnippetCount      int
+	GoSnippetCount         int
+	MarkdownSnippetCount   int
+	JavaScriptSnippetCount int
 }
 
 var RD ReadmeData
@@ -36,13 +38,19 @@ func main() {
 }
 
 func fillReadmeData() {
-	countGoSnippets()
-}
+	var result int
 
-func countGoSnippets() {
-	result := countSnippets("go")
+	result = countSnippets("go")
 	RD.TotalSnippetCount += result
 	RD.GoSnippetCount = result
+
+	result = countSnippets("markdown")
+	RD.TotalSnippetCount += result
+	RD.MarkdownSnippetCount = result
+
+	result = countSnippets("javascript")
+	RD.TotalSnippetCount += result
+	RD.JavaScriptSnippetCount = result
 }
 
 func countSnippets(lang string) int {
