@@ -2,7 +2,8 @@ const exec = require('child_process').execSync
 
 const flags = process.argv.slice(2);
 
-run("git add .")
+run("go run ./ci/main.go", false)
+run("git add -u .")
 
 let changedFiles = run("git status -s").split("\n").map(e => e.split(" ")[e.split(" ").length - 1])
 
@@ -35,6 +36,9 @@ for (const changedFile of changedFiles) {
         case "C":
             message = "copied"
             break
+        case "?":
+            message = "added"
+            break
         default:
             break
     }
@@ -49,7 +53,7 @@ for (const changedFile of changedFiles) {
 }
 
 for (let file of files) {
-    run(`git restore --staged ${file.path}`)
+    if (!file.path.endsWith("/")) run(`git restore --staged ${file.path}`)
 }
 
 for (let file of files) {
@@ -59,7 +63,9 @@ for (let file of files) {
 
 if (flags[0] === "push") console.log(run("git push"))
 
-function run(cmd) {
-    console.log(`# Running command: "${cmd}"`)
+function run(cmd, quite) {
+    if (quite !== true) {
+        console.log(`# Running command: "${cmd}"`)
+    }
     return exec(cmd, {encoding: 'utf-8'}).trim()
 }
