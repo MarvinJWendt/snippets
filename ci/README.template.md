@@ -1,6 +1,6 @@
 <h1 align="center">Snippets 📓</h1>
 
-<p align="center">A total of `{{ .TotalSnippetCount }}` snippets for various programming languages</p>
+<p align="center">A total of <code>{{ .TotalSnippetCount }}</code> snippets for various programming languages</p>
 
 ## Stats
 
