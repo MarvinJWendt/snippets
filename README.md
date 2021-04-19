@@ -1,9 +1,8 @@
-# Snippets
+<h1 align="center">Snippets 📓</h1>
 
-Snippets for various programming languages.  
-PRs welcome! 🚀
+<p align="center">A total of `9` snippets for various programming languages</p>
 
-We currently feature a total of `9` snippets!
+## Stats
 
 |Language|Count|
 |--------|-----|
