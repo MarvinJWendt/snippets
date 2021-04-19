@@ -42,18 +42,21 @@ func fillReadmeData() {
 }
 
 func countGoSnippets() {
+	result := countSnippets("go")
+	RD.TotalSnippetCount += result
+	RD.GoSnippetCount = result
+}
+
+func countSnippets(lang string) int {
 	var result int
-	check(filepath.Walk(filepath.Join(projectPath, "/go"), func(path string, info fs.FileInfo, err error) error {
+	check(filepath.Walk(filepath.Join(projectPath, "/" + lang), func(path string, info fs.FileInfo, err error) error {
 		if strings.Contains(path, ".") {
 			return nil
 		}
-
 		result++
-
 		return nil
 	}))
-	RD.TotalSnippetCount += result
-	RD.GoSnippetCount = result
+	return result
 }
 
 func check(err error) {
