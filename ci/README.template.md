@@ -7,4 +7,6 @@
 |Language|Count|
 |--------|-----|
 |Go|`{{ .GoSnippetCount }}`|
+|Markdown|`{{ .MarkdownSnippetCount }}`|
+|JavaScript|`{{ .JavaScriptSnippetCount }}`|
 | = Total|`{{ .TotalSnippetCount }}`|
