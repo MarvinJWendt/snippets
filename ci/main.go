@@ -30,10 +30,8 @@ func main() {
 
 	tmpl, err := template.ParseFiles(filepath.Join(ciPath, "/README.template.md"))
 	check(err)
-
 	var tpl bytes.Buffer
 	check(tmpl.Execute(&tpl, RD))
-
 	check(ioutil.WriteFile(filepath.Join(ciPath, "../README.md"), tpl.Bytes(), 0600))
 }
 
