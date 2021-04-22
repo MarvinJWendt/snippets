@@ -58,13 +58,14 @@ func fillReadmeData() {
 func countSnippets(lang string) int {
 	var result int
 	var toc string
-	toc += "\n## " + lang
+	toc += "\n## " + lang + "\n"
 	check(filepath.Walk(filepath.Join(projectPath, "/"+lang), func(path string, info fs.FileInfo, err error) error {
 		if strings.Contains(path, ".") {
 			return nil
 		}
 		result++
-		toc += "- " + filepath.Dir(path) + "\n"
+		_, f := filepath.Split(path)
+		toc += "- " + f + "\n"
 		return nil
 	}))
 	RD.SnippetTree += toc
