@@ -11,6 +11,39 @@
 |JavaScript|`2`|
 | = Total|`26`|
 
+## Snippets
+
+
+## go- D:\dev\snippets
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+- D:\dev\snippets\go
+
+## markdown- D:\dev\snippets
+- D:\dev\snippets\markdown
+- D:\dev\snippets\markdown
+- D:\dev\snippets\markdown
+- D:\dev\snippets\markdown
+- D:\dev\snippets\markdown
+
+## javascript- D:\dev\snippets
+- D:\dev\snippets\javascript
+
+
 ---
 
 > [MarvinJWendt.com](https://marvinjwendt.com) &nbsp;&middot;&nbsp;
