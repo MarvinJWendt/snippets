@@ -14,7 +14,7 @@ func main() {
 	fmt.Println(FindMinimumFloat64InSlice(s)) // Output: -0.9
 }
 
-// FindMinimumFloat64InSlice finds the minimum of an float64 slice
+// FindMinimumFloat64InSlice finds the minimum of a float64 slice
 func FindMinimumFloat64InSlice(s []float64) float64 {
 	var min float64
 	for i, v := range s {
