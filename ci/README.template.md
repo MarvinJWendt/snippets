@@ -6,7 +6,6 @@
 
 ### Stats
 
-> Last update was: {{ .LastUpdateTime }}
 
 |Language|Count|
 |--------|-----|
@@ -14,6 +13,7 @@
 |Markdown|`{{ .MarkdownSnippetCount }}`|
 |JavaScript|`{{ .JavaScriptSnippetCount }}`|
 | = Total|`{{ .TotalSnippetCount }}`|
+> Last update was: {{ .LastUpdateTime }}
 
 {{ .SnippetTree }}
 
