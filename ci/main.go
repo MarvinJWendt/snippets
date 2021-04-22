@@ -30,7 +30,7 @@ var ciPath string
 var projectPath string
 
 func main() {
-	RD.LastUpdateTime = time.Now()
+	RD.LastUpdateTime = time.Now().Round(time.Hour*24)
 	_, scriptPath, _, _ := runtime.Caller(0)
 	ciPath = filepath.Join(scriptPath, "../")
 	projectPath = filepath.Join(ciPath, "../")
