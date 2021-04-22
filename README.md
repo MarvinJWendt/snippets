@@ -6,7 +6,7 @@
 
 ### Stats
 
-> Last update was: 2021-04-23 02:00:00 +0200 CEST
+> Last update was: 22 Apr 21 13:21 UTC
 
 |Language|Count|
 |--------|-----|
