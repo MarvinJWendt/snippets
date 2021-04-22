@@ -60,7 +60,7 @@ func countSnippets(lang string) int {
 	var toc string
 	toc += "\n## " + lang + "\n"
 	check(filepath.Walk(filepath.Join(projectPath, "/"+lang), func(path string, info fs.FileInfo, err error) error {
-		if strings.Contains(path, ".") || strings.Contains(path, "_") || filepath.Dir(path) == lang {
+		if strings.Contains(path, ".") || strings.Contains(path, "_") || filepath.Base(path) == lang {
 			return nil
 		}
 		result++
