@@ -16,6 +16,8 @@ type ReadmeData struct {
 	GoSnippetCount         int
 	MarkdownSnippetCount   int
 	JavaScriptSnippetCount int
+
+	SnippetTree string
 }
 
 var RD ReadmeData
@@ -55,13 +57,17 @@ func fillReadmeData() {
 
 func countSnippets(lang string) int {
 	var result int
-	check(filepath.Walk(filepath.Join(projectPath, "/" + lang), func(path string, info fs.FileInfo, err error) error {
+	var toc string
+	toc += "\n## " + lang
+	check(filepath.Walk(filepath.Join(projectPath, "/"+lang), func(path string, info fs.FileInfo, err error) error {
 		if strings.Contains(path, ".") {
 			return nil
 		}
 		result++
+		toc += "- " + filepath.Dir(path) + "\n"
 		return nil
 	}))
+	RD.SnippetTree += toc
 	return result
 }
 
