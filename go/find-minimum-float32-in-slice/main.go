@@ -14,7 +14,7 @@ func main() {
 	fmt.Println(FindMinimumFloat32InSlice(s)) // Output: -0.9
 }
 
-// FindMinimumFloat32InSlice finds the minimum of an float32 slice
+// FindMinimumFloat32InSlice finds the minimum of a float32 slice
 func FindMinimumFloat32InSlice(s []float32) float32 {
 	var min float32
 	for i, v := range s {
