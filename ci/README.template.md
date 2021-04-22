@@ -11,6 +11,10 @@
 |JavaScript|`{{ .JavaScriptSnippetCount }}`|
 | = Total|`{{ .TotalSnippetCount }}`|
 
+## Snippets
+
+{{ .SnippetTree }}
+
 ---
 
 > [MarvinJWendt.com](https://marvinjwendt.com) &nbsp;&middot;&nbsp;
