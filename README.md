@@ -1,22 +1,21 @@
 <h1 align="center">Snippets 📓</h1>
 
-<p align="center">A total of <code>26</code> snippets for various programming languages</p>
+<p align="center">A total of <code>24</code> snippets for various programming languages</p>
 
 ## Stats
 
 |Language|Count|
 |--------|-----|
-|Go|`18`|
+|Go|`17`|
 |Markdown|`6`|
-|JavaScript|`2`|
-| = Total|`26`|
+|JavaScript|`1`|
+| = Total|`24`|
 
 ## Snippets
 
 
 ## go
 - go
-- _experimenting
 - calculate-average-duration
 - calculate-average-float32
 - calculate-average-float64
@@ -44,7 +43,6 @@
 
 ## javascript
 - javascript
-- _experimenting
 
 
 ---
