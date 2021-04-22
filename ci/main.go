@@ -66,7 +66,7 @@ func countSnippets(lang string) int {
 		}
 		result++
 		_, f := filepath.Split(path)
-		toc += fmt.Sprintf("- %s\n", f)
+		toc += fmt.Sprintf("- [%s](%s/%s)\n", f, lang, f)
 		return nil
 	}))
 	RD.SnippetTree += toc
