@@ -10,3 +10,8 @@
 |Markdown|`{{ .MarkdownSnippetCount }}`|
 |JavaScript|`{{ .JavaScriptSnippetCount }}`|
 | = Total|`{{ .TotalSnippetCount }}`|
+
+---
+
+> [MarvinJWendt.com](https://marvinjwendt.com) &nbsp;&middot;&nbsp;
+> GitHub [@MarvinJWendt](https://github.com/MarvinJWendt) &nbsp;&middot;&nbsp;
