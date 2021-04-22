@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"fmt"
 	"io/fs"
 	"io/ioutil"
 	"log"
@@ -65,7 +66,7 @@ func countSnippets(lang string) int {
 		}
 		result++
 		_, f := filepath.Split(path)
-		toc += "- " + f + "\n"
+		toc += fmt.Sprintf("- %s\n", f)
 		return nil
 	}))
 	RD.SnippetTree += toc
