@@ -14,7 +14,7 @@ func main() {
 	fmt.Println(FindMaximumFloat32InSlice(s)) // Output: -0.1
 }
 
-// FindMaximumFloat32InSlice finds the maximum of an float32 slice
+// FindMaximumFloat32InSlice finds the maximum of a float32 slice
 func FindMaximumFloat32InSlice(s []float32) float32 {
 	var max float32
 	for i, v := range s {
