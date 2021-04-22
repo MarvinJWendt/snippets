@@ -2,7 +2,9 @@
 
 <p align="center">A total of <code>{{ .TotalSnippetCount }}</code> snippets for various programming languages</p>
 
-## Stats
+## Snippets
+
+### Stats
 
 |Language|Count|
 |--------|-----|
@@ -10,8 +12,6 @@
 |Markdown|`{{ .MarkdownSnippetCount }}`|
 |JavaScript|`{{ .JavaScriptSnippetCount }}`|
 | = Total|`{{ .TotalSnippetCount }}`|
-
-## Snippets
 
 {{ .SnippetTree }}
 
