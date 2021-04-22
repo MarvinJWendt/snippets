@@ -21,7 +21,7 @@ type ReadmeData struct {
 
 	SnippetTree string
 
-	LastUpdateTime time.Time
+	LastUpdateTime string
 }
 
 var RD ReadmeData
@@ -30,7 +30,7 @@ var ciPath string
 var projectPath string
 
 func main() {
-	RD.LastUpdateTime = time.Now().Round(time.Hour*24)
+	RD.LastUpdateTime = time.Now().UTC().Format(time.RFC822)
 	_, scriptPath, _, _ := runtime.Caller(0)
 	ciPath = filepath.Join(scriptPath, "../")
 	projectPath = filepath.Join(ciPath, "../")
