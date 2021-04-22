@@ -6,7 +6,6 @@
 
 ### Stats
 
-> Last update was: 22 Apr 21 13:21 UTC
 
 |Language|Count|
 |--------|-----|
@@ -14,6 +13,7 @@
 |Markdown|`5`|
 |JavaScript|`0`|
 | = Total|`21`|
+> Last update was: 22 Apr 21 13:21 UTC
 
 
 ## go
