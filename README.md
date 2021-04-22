@@ -2,7 +2,9 @@
 
 <p align="center">A total of <code>21</code> snippets for various programming languages</p>
 
-## Stats
+## Snippets
+
+### Stats
 
 |Language|Count|
 |--------|-----|
@@ -10,8 +12,6 @@
 |Markdown|`5`|
 |JavaScript|`0`|
 | = Total|`21`|
-
-## Snippets
 
 
 ## go
