@@ -14,7 +14,7 @@ func main() {
 	fmt.Println(FindMaximumFloat64InSlice(s)) // Output: -0.1
 }
 
-// FindMaximumFloat64InSlice finds the maximum of an float64 slice
+// FindMaximumFloat64InSlice finds the maximum of a float64 slice
 func FindMaximumFloat64InSlice(s []float64) float64 {
 	var max float64
 	for i, v := range s {
