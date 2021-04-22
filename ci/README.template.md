@@ -6,6 +6,8 @@
 
 ### Stats
 
+> Last update was: {{ .LastUpdateTime }}
+
 |Language|Count|
 |--------|-----|
 |Go|`{{ .GoSnippetCount }}`|
