@@ -10,6 +10,7 @@ import (
 	"runtime"
 	"strings"
 	"text/template"
+	"time"
 )
 
 type ReadmeData struct {
@@ -19,6 +20,8 @@ type ReadmeData struct {
 	JavaScriptSnippetCount int
 
 	SnippetTree string
+
+	LastUpdateTime time.Time
 }
 
 var RD ReadmeData
@@ -27,6 +30,7 @@ var ciPath string
 var projectPath string
 
 func main() {
+	RD.LastUpdateTime = time.Now()
 	_, scriptPath, _, _ := runtime.Caller(0)
 	ciPath = filepath.Join(scriptPath, "../")
 	projectPath = filepath.Join(ciPath, "../")
