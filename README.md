@@ -10,3 +10,8 @@
 |Markdown|`6`|
 |JavaScript|`2`|
 | = Total|`26`|
+
+---
+
+> [MarvinJWendt.com](https://marvinjwendt.com) &nbsp;&middot;&nbsp;
+> GitHub [@MarvinJWendt](https://github.com/MarvinJWendt) &nbsp;&middot;&nbsp;
